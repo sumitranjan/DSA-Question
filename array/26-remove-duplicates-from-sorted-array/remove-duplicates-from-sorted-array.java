@@ -7,7 +7,6 @@ class Solution {
                 nums[i] = nums[j];
             }
         }
-        System.out.println(nums);
         return i+1;
     }
 }
