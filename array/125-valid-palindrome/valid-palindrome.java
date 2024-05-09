@@ -10,7 +10,7 @@ class Solution {
     public boolean palindromeFun(String s, int i){
         if(i >= s.length()/2)
             return true;
-        if(Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(s.length()-i-1)))
+        if(s.charAt(i) != s.charAt(s.length()-i-1))
             return false;
         return palindromeFun(s, i+1);
     }
