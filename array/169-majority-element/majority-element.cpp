@@ -3,19 +3,18 @@ public:
     int majorityElement(vector<int>& nums) {
         int n = nums.size();
         map<int, int> mpp;
+
+        //storing the elements with its occurnce:
         for(int i=0; i<n; i++){
-            int value = nums[i];
-            mpp[value]++;
+            mpp[nums[i]]++;
         }
 
-        int count = INT_MIN;
-        int majorityElement = 0;
-        for(auto &pair : mpp){
-            if(pair.second > count){
-                count = pair.second;
-                majorityElement = pair.first;
+        //searching for the majority element:
+        for(auto it : mpp){
+            if(it.second > (n/2)){
+                return it.first;
             }
         }
-        return majorityElement;
+        return -1;
     }
 };
