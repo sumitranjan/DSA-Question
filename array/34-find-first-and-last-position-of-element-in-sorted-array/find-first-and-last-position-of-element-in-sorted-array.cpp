@@ -8,12 +8,8 @@ public:
                 if(first == 0){
                     first = 1;
                     ans[0] = i;
-                    ans[1] = i; // Initialize ending position to the first occurrence
-
                 }
-                else{
-                    ans[1] = i;
-                }
+                ans[1] = i;
             }
         }
         return ans;
