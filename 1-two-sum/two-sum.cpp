@@ -5,7 +5,7 @@ public:
         map<int, int> mpp;
         for(int i=0; i<n; i++){
             int more = target - nums[i];
-            if(mpp.find(more) != mpp.end() ){
+            if(mpp.find(more) != mpp.end()){
                 return {mpp[more], i};
             }
             mpp[nums[i]] = i;
