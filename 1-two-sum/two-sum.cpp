@@ -9,7 +9,7 @@ public:
                 return {mpp[more], i};
             }
             mpp[nums[i]] = i;
-        }
+        } 
         return {-1, -1};
     }
 };
