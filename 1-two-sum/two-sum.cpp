@@ -6,12 +6,10 @@ public:
         for(int i=0; i<n; i++){
             int more = target - nums[i];
             if(mpp.find(more) != mpp.end() ){
-                return {i, mpp[more]};
+                return {mpp[more], i};
             }
-            else{
-                mpp.insert({nums[i], i});
-            }
+            mpp[nums[i]] = i;
         }
-        return {};
+        return {-1, -1};
     }
 };
