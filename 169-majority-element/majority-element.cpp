@@ -16,6 +16,18 @@ public:
                 count--;
             }
         } 
-        return majEl;
+        //checking if the stored element
+        // is the majority element:
+        int count1 = 0;
+        for(int i=0; i<n; i++){
+            if(majEl == nums[i])
+                count1++;
+        }
+        
+        if(count1 > n/2){
+            return majEl;
+        }
+
+        return -1;
     }
 };
