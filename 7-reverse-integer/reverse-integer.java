@@ -5,10 +5,10 @@ class Solution {
         while(x != 0){
             int lastDigit = x % 10;
             // Overflow check before multiplying and adding the digit
-            if (revNum > Integer.MAX_VALUE / 10) {
+            if (revNum > Integer.MAX_VALUE / 10 || (revNum == Integer.MAX_VALUE / 10 && lastDigit > 7)) {
                 return 0; // overflow for positive numbers
             }
-            if (revNum < Integer.MIN_VALUE / 10){
+            if (revNum < Integer.MIN_VALUE / 10 || (revNum == Integer.MIN_VALUE / 10 && lastDigit < -8)) {
                 return 0; // overflow for negative numbers
             }
             revNum = revNum * 10 + lastDigit;
